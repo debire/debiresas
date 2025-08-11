@@ -1,0 +1,784 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+body,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+.maincontent{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.default{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://w0.peakpx.com/wallpaper/972/359/HD-wallpaper-the-field-peacful-large-farming-nature-field-agriculture-rural-vast-calm-green-huge.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.first{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+    font-size: 16px;
+    justify-content: center;
+
+}
+.dft{
+    width: 200px;
+    font-size: 16px;
+}
+.dft:hover{
+    background-color: grey;
+    border: none;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.header1{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.logo{
+    width: 30%;
+}
+.header2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+}
+.link{
+    padding: 10px;
+}
+.link1{
+    border-bottom: 3px solid grey;
+    font-size: 18px;
+}
+.link:hover{
+    font-size: 18px;
+}
+.header3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:end;
+    width: 100%;
+    gap: 30px;
+}
+.header3m{
+    display: none;
+}
+button{
+    background-color: white;
+    border-radius:5px;
+    border: 1px solid grey;
+    padding: 8px;
+    width: fit-content;
+}
+button:hover{
+    background-color: #808080;
+    color: white;
+    border: 1px solid white;
+}
+.footer{
+    display: flex;
+    flex-direction: row;
+    align-items:start;
+    justify-content: space-between;
+    padding: 20px;
+    padding-left: 60px;
+    gap: 220px;
+    width: 100%;
+    border-top: 1.5px solid grey;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.foot1{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 100%;
+}
+.foot2{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 100%;
+}
+.foot3{
+    align-items: start  ;
+    gap: 20px;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+.hero{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-image: url(https://images.unsplash.com/photo-1545300329-e785e923ed45?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 85.5vh;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 80%;
+}
+.smartagric{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    font-size: 50px;
+}
+.paragragh{
+    font-size: 20px;
+    width: 100%;
+}
+.click{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.herobutton{
+    width: 85px;
+    border: 1px solid white;
+}
+
+.herobutton:hover{
+    background-color: white ;
+    color: white;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.log{
+    border-bottom: 1px solid grey;
+}
+.form {
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    width: 400px;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.tag{
+    border-bottom: 1.5px solid grey;
+    width: 100%;
+    padding: 5px;
+}
+input{
+    width: 100%;
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    border: none;
+    padding: 7px;
+    border-radius: 5px;
+}
+select{
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    border: none;
+    padding: 7px;
+    border-radius: 5px;
+    color: gray;
+    width:100% ;
+}
+.inputs{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.login{
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    align-items: center;
+    justify-content: center;
+}
+.title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; 
+    gap: 10px;
+    width: 100%;
+}
+.info1{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.country{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.google{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 175px;
+    justify-content: center;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid grey;
+    padding: 10px;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+.error{
+    color: red;
+    font-size: 0.875rem;
+}
+.success {
+    color: green;
+    font-size: 0.875rem;
+}
+.fonts{
+    font-weight: 600;
+    font-size: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.side{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: start;
+}
+.sections{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 30px;
+    padding: 25px;
+    gap: 20px;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.lean{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.smalltext{
+    width: 100%;
+}
+.one{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 50px;
+    width: 100%;
+}
+.text{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1.5px solid grey;
+    justify-content: center;
+    width: 250px;
+    padding: 10px;
+}
+.info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.two{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+}
+.otun{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.osi{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.rectangle{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+    padding: 15px;
+    width: 400px;
+    border: 1.5px solid grey;
+    border-radius: 20px;
+}
+.function{
+    margin-top: 50px;
+    width: 87%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center ;
+    padding: 8px;
+}
+.long{
+    width: 300px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+.team{
+    align-items: start;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width:300px;
+    border: none;
+}
+.touch{
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 30px;
+}
+.icon{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+}
+.call{
+    display: flex;
+    flex-direction: column;
+    padding:10px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    font-size: 22px;
+    width: 35%;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+.chart-container {
+    width: 900px; /* Default chart width */
+    height: 400px; /* Default chart height */
+    margin: 0 auto;
+}
+.displays{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-around;
+}
+.container {
+    display: none;
+    flex-direction: column;
+}
+
+.burger-menu {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+}
+.burger-menu ion-icon {
+    font-size: 30px;
+    color: black; 
+}
+.profile-menu {
+    display: block;
+}
+.profile-menu ion-icon {
+    color: black;
+    font-size: 30px;
+}
+.profilecontainer{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+nav {
+    display: none;
+    width: 100px;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    box-sizing: border-box;
+}
+nav a {
+    width: 100px;
+    display: block;
+    text-align: left;
+    padding: 5px 10px;
+    border-bottom: 1px solid #eee;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5;
+    transition: background-color 0.3s ease;
+}
+nav a:hover {
+    background-color: #f0f0f0;
+}
+
+@media screen and (max-width:900px) {
+    .maincontent{
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .header{
+        width: 100%;
+        padding: 15px;
+        align-items: center;
+        justify-content: space-between;
+        gap:190px;
+        display: flex;
+        flex-direction: row;
+    }
+    .logo{
+        width:100%;
+    }
+    .header1{
+        width: 100%;
+    }
+    .perks{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .header2{
+        display: none;
+    }
+    .header3{
+        gap: 10px;
+        width:100%;
+        display: flex;
+    }
+    .header3m{
+        display: block;
+        width: 10%;
+    }
+    button{
+        padding: 5px;
+    }
+    .hero{
+        display: flex;
+        flex-direction: column;
+        height: 60vh;
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        gap: 30px;
+    }
+    .smartagric{
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        font-size: 30px;
+        width: 100%;
+    }
+    .paragragh{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        font-size: 13px;
+        width:100% ;
+    }
+    .fonts{
+        width: 95%;
+        font-size: 22px;
+        display: flex;
+        align-items: start;
+        justify-content: start;
+    }
+    .smalltext{
+        width: 97%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .right{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+    }
+    .pad{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .left{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .lean{
+        padding-left: 20px;
+    }
+    .info{
+        display: flex;
+        flex-direction: column;
+    }
+    .sections{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 10px;
+    }
+    .one{
+        display: flex;
+        flex-direction: column;
+    }
+    .two{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+    .rectangle{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        padding: 3px;
+    }
+    .otun{
+        gap:10px;
+    }
+    .osi{
+        gap:10px;
+    }
+    .two{
+        gap:10px;
+    }
+    .insights{
+        width: 90%;
+    }
+    .form{
+        width: 100%;
+    }
+    select{
+        width:100%;
+    }
+    .serve{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .same{
+        border-radius: 30px;
+    }
+    .touch{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .call{
+        width: 85%;
+    }
+    table {
+        overflow-x: auto;
+        display: block;
+        width: 95%;
+        margin: auto;
+    }
+    th, td {
+        font-size: 12px; 
+        padding: 5px; 
+    }
+    .chart-container {
+        width: 100%; /* Full width on mobile */
+        height: 300px; /* Adjusted height for mobile */
+    }
+    .container{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+    .profilecontainer{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+    nav {
+        display: none;
+        width: 100px;
+        position: absolute;
+        top: 40px;
+        right: 0;
+        background-color: #f9f9f9;
+        border-top: 1px solid #ddd;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+        box-sizing: border-box;
+    }
+    nav a {
+        width: 100px;
+        display: block;
+        text-align: left;
+        padding: 5px 10px;
+        border-bottom: 1px solid #eee;
+        text-decoration: none;
+        color: #333;
+        font-size: 16px;
+        line-height: 1.5;
+        transition: background-color 0.3s ease;
+    }
+    nav a:hover {
+        background-color: #f0f0f0;
+    }
+    .burger-menu {
+        display: block;
+    }
+    .burger-menu ion-icon {
+        color: black;
+        font-size: 30px;
+    }
+    .profile-menu {
+        display: block;
+    }
+    .profile-menu ion-icon {
+        color: black;
+        font-size: 30px;
+    }
+}

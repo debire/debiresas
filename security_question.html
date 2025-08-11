@@ -1,0 +1,150 @@
+<?php
+// Database Connection
+$servername = "localhost";
+$username = "root";  // Change as needed
+$password = "";  // Change as needed
+$dbname = "user_auth";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+session_start();
+
+// Verify Email and Redirect to Security Question Page
+if (isset($_POST['verify_email'])) {
+    $email = trim($_POST['email']);
+    $stmt = $conn->prepare("SELECT security_question FROM users WHERE email = ?");
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $stmt->store_result();
+    
+    if ($stmt->num_rows > 0) {
+        $stmt->bind_result($security_question);
+        $stmt->fetch();
+        $_SESSION['reset_email'] = $email;
+        $_SESSION['security_question'] = $security_question;
+        header("Location: security_question.php");
+        exit();
+    } else {
+        echo "Email not found.";
+    }
+    
+    $stmt->close();
+}
+
+// Verify Security Answer
+if (isset($_POST['verify_answer'])) {
+    if (!isset($_SESSION['reset_email'])) {
+        die("Session expired. Please restart the process.");
+    }
+    
+    $email = $_SESSION['reset_email'];
+    $answer = trim($_POST['security_answer']);
+    
+    $stmt = $conn->prepare("SELECT security_answer FROM users WHERE email = ?");
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $stmt->store_result();
+    
+    if ($stmt->num_rows > 0) {
+        $stmt->bind_result($correct_answer);
+        $stmt->fetch();
+        
+        
+        if (password_verify($answer, $correct_answer)) { // Verify hashed password
+            $_SESSION['reset_allowed'] = true;
+            header("Location: reset_password.php");
+            exit();
+        } else {
+            $error = "Incorrect security answer. Please try again.";
+        }
+    } else {
+        $error = "Error retrieving security answer.";
+    }
+    
+    $stmt->close();
+}
+
+$conn->close();
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log In</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="icon.png">
+</head>
+
+<body>
+  <div class="maincontent">
+    <div class="header log">
+      <div class="header1"><img class="logo" src="logo.png" alt=""></div>
+      <!-- <div class="header2">
+                <div class="link"><a href="home.php">Home</a></div>
+                <div class="link"><a href="datastream.php">Data Stream</a></div>
+                <div class="link"><a href="aboutus.php">About Us</a></div>
+                <div class="link"><a href="contactus.php">Contact Us</a></div>
+            </div> -->
+      <div class="header3">
+        <!-- <p>Don't have an account?</p>
+                <a href="signup.php"><button>Sign Up</button></a> -->
+      </div>
+      <!-- <div class="container">
+              <div class="burger-menu"><ion-icon name="menu-sharp"></ion-icon></div>
+              <nav id="nav-menu">
+                  <a href="home.php">Home</a>
+                  <a href="datastream.php">DataStream</a>
+                  <a href="aboutus.php">About Us</a>
+                  <a href="contactus.php">Contact Us</a>
+              </nav>
+          </div> -->
+    </div>
+
+
+    <form method="post">
+      <div class="form">
+        <div class="tag">
+          <h2>
+            <center>Security Question</center>
+          </h2>
+        </div>
+        <div class="inputs">
+          <p><?php echo isset($_SESSION['security_question']) ? $_SESSION['security_question'] : ""; ?></p>
+          <input style="width: 300px; padding: 7px; outline: none;" type="text" name="security_answer"
+            placeholder="Answer" required />
+        </div>
+        <?php if (isset($error)) { echo "<p style='color: grey;'>$error</p>"; } ?>
+        <div class="login">
+          <button type="submit" name="verify_answer">Submit</button>
+          </p>
+        </div>
+      </div>
+    </form>
+    <!-- <div class="google">
+      <div class="img"><ion-icon name="logo-google"></ion-icon></div>
+      <div class="text" style="font-size: 15px;">Sign in with Google</div>
+    </div><br><br> -->
+
+  </div>
+
+
+  <script>
+    const burgerMenu = document.querySelector('.burger-menu');
+    const navMenu = document.getElementById('nav-menu');
+
+    burgerMenu.addEventListener('click', () => {
+      navMenu.style.display = navMenu.style.display === 'block' ? 'none' : 'block';
+    });
+  </script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icon.png">
+</head>
+
+<body>
+    <div class="maincontent">
+        <div class="header log">
+            <div class="header1"><img class="logo" src="logo.png" alt=""></div>
+            <!-- <div class="header2">
+                <div class="link"><a href="home.html">Home</a></div>
+                <div class="link"><a href="datastream.html">Data Stream</a></div>
+                <div class="link"><a href="aboutus.html">About Us</a></div>
+                <div class="link"><a href="contactus.html">Contact Us</a></div>
+            </div> -->
+            <div class="header3">
+                <!-- <p>Don't have an account?</p>
+                <a href="signup.html"><button>Sign Up</button></a> -->
+            </div>
+            <!-- <div class="container">
+                <div class="burger-menu"><ion-icon name="menu-sharp"></ion-icon></div>
+                <nav id="nav-menu">
+                    <a href="home.html">Home</a>
+                    <a href="datastream.html">DataStream</a>
+                    <a href="aboutus.html">About Us</a>
+                    <a href="contactus.html">Contact Us</a>
+                </nav>
+            </div> -->
+        </div>
+
+        <form method="post">
+            <div class="form" id="registrationForm">
+                <div class="tag">
+                    <h2>
+                        <center>Configure IoT Devices</center>
+                    </h2>
+                </div>
+                <div class="inputs">
+                    <h4>
+                        <center>Insert the following details appropriately</center>
+                    </h4>
+                    <input style="width: 100%; padding: 7px; outline: none;" type="text" name="wifi"
+                        placeholder="WiFi SSID" required />
+                    <input style="width: 100%; padding: 7px; outline: none;" type="password" name="wifi-password"
+                        placeholder="Wifi Password" required />
+                    <input placeholder="ThinkSpeak API Key" type="text" name="ts-api-key" required>
+                    <input placeholder="ThinkSpeak Channel ID" type="text" name="ts-api-key" required>
+                </div>
+                <div class="login">
+                    <a href="datastream.html"><button type="submit">Enter</button></a><br>
+                </div>
+            </div>
+        </form>
+        <!-- <div class="google">
+            <div class="img"><ion-icon name="logo-google"></ion-icon></div>
+            <div class="text">Log in with Google</div>
+        </div><br><br> -->
+
+
+    </div>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        const burgerMenu = document.querySelector('.burger-menu');
+        const navMenu = document.getElementById('nav-menu');
+
+        burgerMenu.addEventListener('click', () => {
+            navMenu.style.display = navMenu.style.display === 'block' ? 'none' : 'block';
+        });
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

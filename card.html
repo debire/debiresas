@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataStream - AgroTech</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icon.png">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+</head>
+
+<body>
+    <div class="maincontent">
+        <div class="header">
+            <div class="header1"><img class="logo" src="logo.png" alt=""></div>
+            <div class="header2">
+                <div class="link"><a href="home.html">Home</a></div>
+                <div class="link link1"><a href="datastream.html">Data Stream</a></div>
+                <div class="link"><a href="aboutus.html">About Us</a></div>
+                <div class="link"><a href="contactus.html">Contact Us</a></div>
+            </div>
+            <div class="header3">
+            <div class="container">
+                <div class="burger-menu"><ion-icon name="menu-sharp"></ion-icon></div>
+                <nav id="nav-menu">
+                    <a href="home.html">Home</a>
+                    <a href="datastream.html">DataStream</a>
+                    <a href="aboutus.html">About Us</a>
+                    <a href="contactus.html">Contact Us</a>
+                </nav>
+            </div>
+            <div class="profilecontainer">
+                <div class="profile-menu"><ion-icon name="person-circle"></ion-icon></div>
+                <nav id="profile-menu">
+                    <a href="#">Profile</a>
+                    <a href="#">Settings</a>
+                    <a href="index.html">Log Out</a>
+                </nav>
+            </div>
+           </div>
+        </div>
+        
+        <div class="displays">
+            <div class="link"><a href="datastream.html">Table</a></div>
+            <div class="link"><a href="chart.html">Chart</a></div>
+            <div class="link link1"><a href="card.html">Card</a></div>
+        </div>
+        <div id="data-container">Loading...</div>
+        <p>Last Updated: <span id="last-updated"></span></p>
+        <script src="card.js"></script> 
+        
+        
+
+        <div class="footer">
+            <div class="foot1">
+                <a href="home.html"><img src="logo.png" alt=""
+                        style="width: 300px;"></a>
+                <div class="end">
+                    <p style="font-size: 16px;"><b>AgroTech</b> is a platform that receives data from IoT
+                        sensors planted on farms and displays the information to farmers, helping them make informed
+                        decisions.</p>
+                </div>
+            </div>
+            <div class="foot2">
+                <h2>Contact Us</h2><br>
+                <p><b>IoT Specialist</b></p>
+                <p>Fanimokun Oyindamola Dorcas</p>
+                <p>Tel: +234 901 798 1088</p><br>
+
+                <p><b>Frontend Developer</b></p>
+                <p>Ebire Oluwadamilare John</p>
+                <p>Tel: +234 913 604 0712</p><br>
+
+                <p><b>UI/UX Designer</b></p>
+                <p>Aniedobe Gloria</p>
+                <p>Tel: +234 916 303 8617</p><br>               
+            </div>
+            <div class="foot3">
+                <h2>Menu</h2>
+                <p><a href="home.html">Home</a></p>
+                <p><a href="datastream.html">Data Stream</a></p>
+                <p><a href="aboutus.html">About Us</a></p>
+            </div>
+        </div>
+
+    </div>
+    
+    <script>
+        const burgerMenu = document.querySelector('.burger-menu');
+        const navMenu = document.getElementById('nav-menu');
+
+        burgerMenu.addEventListener('click', () => {
+            navMenu.style.display = navMenu.style.display === 'block' ? 'none' : 'block';
+        });
+    </script>
+    <script>
+        const profileMenu = document.querySelector('.profile-menu');
+        const profMenu = document.getElementById('profile-menu');
+
+        profileMenu.addEventListener('click', () => {
+            profMenu.style.display = profMenu.style.display === 'block' ? 'none' : 'block';
+        });
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

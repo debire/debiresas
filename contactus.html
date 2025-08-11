@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - AgroTech</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icon.png">
+</head>
+<body>
+    <div class="maincontent">
+        <div class="header">
+            <div class="header1"><img class="logo" src="logo.png" alt=""></div>
+            <div class="header2">
+                <div class="link"><a href="home.html">Home</a></div>
+                <div class="link"><a href="datastream.html">Data Stream</a></div>
+                <div class="link"><a href="aboutus.html">About Us</a></div>
+                <div class="link link1"><a href="contactus.html">Contact Us</a></div>
+            </div>
+            <div class="header3">
+                <div class="container">
+                    <div class="burger-menu"><ion-icon name="menu-sharp"></ion-icon></div>
+                    <nav id="nav-menu">
+                        <a href="home.html">Home</a>
+                        <a href="datastream.html">DataStream</a>
+                        <a href="aboutus.html">About Us</a>
+                        <a href="contactus.html">Contact Us</a>
+                    </nav>
+                </div>
+                <div class="profilecontainer">
+                    <div class="profile-menu"><ion-icon name="person-circle"></ion-icon></div>
+                    <nav id="profile-menu">
+                        <a href="#">Profile</a>
+                        <a href="#">Settings</a>
+                        <a href="index.html">Log Out</a>
+                    </nav>
+                </div>
+               </div>
+        </div>
+        <div class="hero lean">
+            <div class="content">
+                <div class="smartagric">
+                    <h1>Contact <br> AgroTech</h1>
+                </div>
+            </div>
+        </div>
+        <div class="form contact">
+            <div class="fonts">Contact Us</div>
+            <div class="inputs">
+                <input style="width: 300px; padding: 7px; outline: none;" type="text" placeholder="Enter your Name" />
+                <input style="width: 300px; padding: 7px; outline: none;" type="email" placeholder="Enter your Email" />
+                <input style="width: 300px; height: 100px; padding: 7px; outline: none;" type="text"/>
+            </div>
+            <div class="login">
+                <button class="login">Submit</button>
+            </div>
+        </div>
+        <div class="touch">
+            <div class="call">
+                <div class="icon"><ion-icon name="call"></ion-icon> Tel:</div>
+                <p>+234 913 604 0712</p>
+                <p>+234 916 303 8617</p>
+                <p>+234 901 798 1088</p>
+            </div>
+            <div class="call">
+                <div class="icon"><ion-icon name="mail"></ion-icon> Email:</div>
+                <p>- damilareebire@gmail.com</p>
+                <p>- oyindamolafanimokun@gmail.com</p>
+                <p>- aniedobe0047@gmail.com</p>
+            </div>
+            <div class="call">
+                <div class="icon"><ion-icon name="logo-whatsapp"></ion-icon>Whatsapp:</div>
+                <p>+234 913 604 0712</p>
+                <p>+234 916 303 8617</p>
+                <p>+234 901 798 1088</p>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="foot1">
+                <a href="home.html"><img src="logo.png" alt=""
+                        style="width: 300px;"></a>
+            <div class="end"><p style="font-size: 16px;"><b>AgroTech</b> is a platform that receives data from IoT sensors planted on farms and displays the information to farmers, helping them make informed decisions.</p>
+            </div>
+            </div>
+            <div class="foot2">
+                <h2>Contact Us</h2><br>
+                <p><b>IoT Specialist</b></p>
+                <p>Fanimokun Oyindamola Dorcas</p>
+                <p>Tel: +234 901 798 1088</p><br>
+
+                <p><b>Frontend Developer</b></p>
+                <p>Ebire Oluwadamilare John</p>
+                <p>Tel: +234 913 604 0712</p><br>
+
+                <p><b>UI/UX Designer</b></p>
+                <p>Aniedobe Gloria</p>
+                <p>Tel: +234 916 303 8617</p><br>               
+            </div>
+            <div class="foot3">
+                <h2>Menu</h2>
+                <p><a href="home.html">Home</a></p>
+                <p><a href="datastream.html">Data Stream</a></p>
+                <p><a href="aboutus.html">About Us</a></p>
+            </div>
+        </div>
+
+        </div>
+    
+        <script>
+            const burgerMenu = document.querySelector('.burger-menu');
+            const navMenu = document.getElementById('nav-menu');
+    
+            burgerMenu.addEventListener('click', () => {
+                navMenu.style.display = navMenu.style.display === 'block' ? 'none' : 'block';
+            });
+        </script>
+        <script>
+            const profileMenu = document.querySelector('.profile-menu');
+            const profMenu = document.getElementById('profile-menu');
+    
+            profileMenu.addEventListener('click', () => {
+                profMenu.style.display = profMenu.style.display === 'block' ? 'none' : 'block';
+            });
+        </script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </body>
+    </html>
